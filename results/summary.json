@@ -1,0 +1,106 @@
+{
+  "source": "cache",
+  "price_rows": {
+    "EEM": 5687,
+    "FEZ": 5807,
+    "SPX": 6509
+  },
+  "oos_start": "2007-04-18",
+  "oos_end": "2025-11-17",
+  "oos_days": {
+    "EEM": 4678,
+    "FEZ": 4678,
+    "SPX": 4678
+  },
+  "window": 1008,
+  "refit_every": 21,
+  "ewma_lambda": 0.94,
+  "refits": 4281,
+  "fit_failures": 3,
+  "nonconverged": 4,
+  "best_qlike_model": "gjr_t",
+  "qlike_mean": {
+    "gjr_t": 1.347584324653776,
+    "gjr_n": 1.3497960488743093,
+    "egarch_t": 1.3534281814989442,
+    "egarch_n": 1.3586302582053342,
+    "garch_t": 1.3745580320869557,
+    "garch_n": 1.3776282158664863,
+    "ewma": 1.4034833846262231,
+    "gb_rv": 1.534220804678711
+  },
+  "preferred_limit_model": "gjr_t",
+  "ranking": [
+    {
+      "rank": 1,
+      "model": "gjr_t",
+      "zone_penalty": 5,
+      "kupiec_failures": 3,
+      "hit_mad": 0.00453612654980761,
+      "qlike": 1.347584324653776
+    },
+    {
+      "rank": 2,
+      "model": "garch_t",
+      "zone_penalty": 5,
+      "kupiec_failures": 3,
+      "hit_mad": 0.005034915205928458,
+      "qlike": 1.3745580320869557
+    },
+    {
+      "rank": 3,
+      "model": "egarch_t",
+      "zone_penalty": 6,
+      "kupiec_failures": 3,
+      "hit_mad": 0.005676214906655266,
+      "qlike": 1.3534281814989442
+    },
+    {
+      "rank": 4,
+      "model": "gjr_n",
+      "zone_penalty": 6,
+      "kupiec_failures": 3,
+      "hit_mad": 0.011804189824711415,
+      "qlike": 1.3497960488743093
+    },
+    {
+      "rank": 5,
+      "model": "garch_n",
+      "zone_penalty": 7,
+      "kupiec_failures": 3,
+      "hit_mad": 0.011020379079378653,
+      "qlike": 1.3776282158664863
+    },
+    {
+      "rank": 6,
+      "model": "ewma",
+      "zone_penalty": 7,
+      "kupiec_failures": 3,
+      "hit_mad": 0.013300555793073965,
+      "qlike": 1.4034833846262231
+    },
+    {
+      "rank": 7,
+      "model": "egarch_n",
+      "zone_penalty": 8,
+      "kupiec_failures": 3,
+      "hit_mad": 0.012160467436226308,
+      "qlike": 1.3586302582053342
+    },
+    {
+      "rank": 8,
+      "model": "gb_rv",
+      "zone_penalty": 12,
+      "kupiec_failures": 3,
+      "hit_mad": 0.010735356990166737,
+      "qlike": 1.534220804678711
+    }
+  ],
+  "elapsed_seconds": 123.7,
+  "charts": [
+    "docs/spx_crisis_volatility.png",
+    "docs/qlike_versus_ewma.png",
+    "docs/spx_var_limits.png",
+    "docs/var99_hit_rates.png"
+  ]
+}

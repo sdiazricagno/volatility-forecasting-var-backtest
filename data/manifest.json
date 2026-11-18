@@ -1,0 +1,29 @@
+{
+  "source": "Yahoo Finance public chart endpoint",
+  "snapshot_last_session": "2025-11-17",
+  "adjustment": "OHLC scaled by the same-day adjusted-close ratio so splits and dividends are not booked as price losses.",
+  "why_not_stooq_or_fred": "Stooq returned a browser check rather than a CSV. FRED series SP500 starts in 2016 and does not cover 2008.",
+  "symbols": {
+    "SPX": {
+      "yahoo": "^GSPC",
+      "name": "S&P 500",
+      "kind": "index",
+      "start": "2000-01-03"
+    },
+    "FEZ": {
+      "yahoo": "FEZ",
+      "name": "EURO STOXX 50 ETF",
+      "kind": "etf",
+      "start": "2002-10-21",
+      "note": "Public EURO STOXX 50 index history on this endpoint begins in March 2007, which is too short for a four-year window before 2008. FEZ is the liquid tracker used here."
+    },
+    "EEM": {
+      "yahoo": "EEM",
+      "name": "Emerging markets ETF",
+      "kind": "etf",
+      "start": "2003-04-14"
+    }
+  },
+  "columns": ["date", "ticker", "open", "high", "low", "close"],
+  "rows": 18003
+}
