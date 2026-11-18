@@ -1,0 +1,21 @@
+[project]
+name = "volforecast"
+version = "1.0.0"
+description = "Volatility forecasts and one-day VaR backtests for equity indices"
+requires-python = ">=3.11"
+authors = [{ name = "Santiago Diaz Ricagno" }]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 110
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM"]
+
+[tool.ruff.lint.per-file-ignores]
+"run_backtest.py" = ["E402"]
+"src/volforecast/plots.py" = ["E402"]
